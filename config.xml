@@ -21,12 +21,5 @@
   <plugin name="cordova-plugin-splashscreen" />
   <splash src="splash.png" />
 
- <!-- impedi que o usuario coloque o celular em modo paisagem-->
-  <preference name="orientation" value="portrait" />
-  
- <!-- colocar em fullscree-->
-  <preference name="fullscreen" value="true" />
-<!--Definindo quais plataformas o app sera buildado -->
-  <platform name="android" />
 
 </widget>
