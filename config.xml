@@ -17,10 +17,10 @@
      Uniliva Alves
   </author>
   <!-- inserindo icone e splash-->
-  <icon src="icon.png">
-  <!---
+  <icon src="imagens/icon.png" />
+
   <plugin name="cordova-plugin-splashscreen" />
-  <splash src="splash.png" /> -->
+  <splash src="imagens/splash.png" />
 
    <!-- impedi que o usuario coloque o celular em modo paisagem-->
   <preference name="orientation" value="portrait" />
