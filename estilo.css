@@ -1,0 +1,60 @@
+/*Verifica se a primeira expressão é valida no primeiro seletor, caso seja executa o estilo o seletor irmão (~)*/
+#opcao-bolos:checked ~ #menu-bebidas{
+    display: none;
+}
+#opcao-bebidas:checked ~ #menu-bolos{
+    display: none;
+}
+
+.menu{
+    width: 100%;
+}
+
+body{
+    background: #3d1a11;
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+input[type=radio]{
+    display: none;
+}
+label{
+    display: block;
+    background-color: #563429;
+    background-size: 4em;
+    background-repeat: no-repeat;
+    background-position: center top;
+    color: white;
+    padding: 4em 0 1em;
+    text-transform: uppercase;
+    font-size:75%;
+}
+
+label[for=opcao-bolos]{
+    background-image: url(imagens/icone-bolos.svg)
+}
+
+
+label[for=opcao-bebidas]{
+    background-image: url(imagens/icone-bebidas.svg)
+}
+
+input[type=radio]:checked + label{
+    background-color: #E4876D;
+}
+label{
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+
+}
+label[for=opcao-bolos]{
+    left: 0;
+}
+
+label[for=opcao-bebidas]{
+    right: 0;
+}
