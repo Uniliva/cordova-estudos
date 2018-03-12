@@ -17,7 +17,7 @@
      Uniliva Alves
   </author>
   <!-- inserindo icone e splash-->
-  <icon src="imagens/icon.png">
+  <icon src="icon.png">
   <plugin name="cordova-plugin-splashscreen" />
   <splash src="splash.png" />
 
