@@ -2,7 +2,6 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.uniliva.cenourapp"
-    versionCode = "1"
     version     = "1.0.0" >
 
 <!-- versionCode is optional and Android only -->
@@ -16,5 +15,15 @@
   <author href="https://uniliva.com.br" email="uniliva@gmail.com">
      Uniliva Alves
   </author>
+  <!-- inserindo icone e splash-->
+  <icon src="imagens/icon.png">
+  <gap:splash src="imagens/splash.png">
+ <!-- impedi que o usuario coloque o celular em modo paisagem-->
+  <preference name="orientation" value="portrait"/>
+  
+ <!-- colocar em fullscree-->
+  <preference name="fullscreen" value="true"/>
+<!--Definindo quais plataformas o app sera buildado -->
+  <gap:platform name="android" />
 
 </widget>
