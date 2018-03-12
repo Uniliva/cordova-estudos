@@ -1,7 +1,5 @@
 /*Verifica se a primeira expressão é valida no primeiro seletor, caso seja executa o estilo o seletor irmão (~)*/
-#opcao-bolos:checked ~ #menu-bebidas{
-    display: none;
-}
+#opcao-bolos:checked ~ #menu-bebidas,
 #opcao-bebidas:checked ~ #menu-bolos{
     display: none;
 }
@@ -57,4 +55,24 @@ label[for=opcao-bolos]{
 
 label[for=opcao-bebidas]{
     right: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+.container-menus {
+    transform: translateX(0);
+    transition: transform 300ms ease;
+    width: 200%;
+}
+
+.container-menus .menu {
+    float: left;
+    width: 50%;
+}
+
+#opcao-bebidas:checked ~ .container-menus {
+    transform: translateX(-50%);
 }
