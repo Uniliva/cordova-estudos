@@ -14,13 +14,17 @@ Aplicativo em html/css e materialize usando o cordova para montar aplicativos pa
 - Adicionando plataformas ao app cordova
 <code>
 cordova platform add browser      //plataforma web
+
 cordova platform add ios       //plataforma ios
+
 cordova platform add android       //plataforma android
 </code>
 
 - Rodar o projeto
 <code>
 cordova run browser        // para rodar na plataforma browser
+
 cordova run android        // para rodar na plataforma android no emulador
+
 cordova run android --device       // para rodar na plataforma android no device
 </code>
