@@ -1,4 +1,5 @@
 $('.collection-item').on('click', function () {
+  
 
     var $badge = $('.badge', this);
     if ($badge.length == 0) {
@@ -6,6 +7,10 @@ $('.collection-item').on('click', function () {
             .appendTo(this);
     }
     $badge.text(parseInt($badge.text()) + 1);
+
+    ///mostra um mensagem rapida
+    var nomeProduto = this.firstChild.textContent;
+    Materialize.toast(nomeProduto + ' adicionado', 1000);
 });
 
 $('.collection').on('click', ".badge", function () {
