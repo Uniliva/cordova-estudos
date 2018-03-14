@@ -19,8 +19,12 @@
         <h5 class="titulo">Só de Cenoura</h5>
 
         <div>
-          <i class="material-icons waves-effect waves-light waves-circle">more_vert</i>
+          <i data-activates="submenu" class="material-icons waves-effect waves-light waves-circle dropdown-button" >more_vert</i>
         </div>
+        <ul class="dropdown-content" id="submenu">
+          <li ><a class="black-text acao-limpar">Limpar</a></li>
+        </ul>
+
       </div>
 
       <ul class="tabs yellow darken-4">
@@ -69,13 +73,33 @@
     </div>
   </div>
 
+  <div class="fixed-action-btn">
+    <a href="#confirmacao" class="btn-floating btn-large waves-effect waves-light brown modal-trigger" id="btn-confirmar">
+      <i class="material-icons">check</i>
+    </a>
+  </div>
 
-
+  <div class="modal modal-fixed-footer" id="confirmacao">
+    <div class="modal-content">
+      <h5>Resume do pedido</h5>
+      <input type="number" class="validate" placeholder="Numero da mesa" id="numero-mesa">
+      <blockquote id="resumo"></blockquote>
+    </div>
+    <div class="modal-footer">
+      <button class="btn deep-orange waves-effect waves-light modal-close">
+        pedir
+      </button>
+      <button class="acao-limpar btn-flat waves-effect waves-red modal-close">
+        cancelar
+      </button>
+    </div>
+  </div>
 
 
 
   <script src="js/jquery.min.js"></script>
   <script src="js/materialize.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
