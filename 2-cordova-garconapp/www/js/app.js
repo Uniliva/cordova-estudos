@@ -1,5 +1,5 @@
 $('.collection-item').on('click', function () {
-  
+
 
     var $badge = $('.badge', this);
     if ($badge.length == 0) {
@@ -34,4 +34,33 @@ $('.modal-trigger').leanModal();
 $('.acao-limpar').on('click', function () {
     $('#numero-mesa').val('');
     $('.badge').remove();
+});
+
+$('.scan-qrcode').click(function(){
+    cordova.plugins.barcodeScanner.scan(function (resultado){     
+        if(resultado.text){ 
+            Materialize.toast('Mesa ' + resultado.text, 2000);
+            $('#numero-mesa').val(resultado.text);     
+        }
+    },function(erro){
+        Materialize.toast(erro,2000,"red-text");
+    });
+});
+
+$(".acao-finalizar").click(function(){
+    $.ajax({
+        url: "https://cozinha.herokuapp.com/novo-pedido",
+        data: {
+            mesa:$("#numero-mesa").val(),
+            pedido:$("#resumo").text()
+        },
+        success: function(resposta){ 
+            Materialize.toast(resposta,2000);
+            $("#numero-mesa").val(" ");
+            $(".badge").remove();
+        },
+        error: function(erro){
+            Materialize.toast(erro.responseText,2000,"red-text");
+        }
+      });
 });
